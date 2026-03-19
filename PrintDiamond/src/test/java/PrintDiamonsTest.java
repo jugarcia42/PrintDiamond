@@ -2,7 +2,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PrintDiamonsTest {
+public class PrintDiamondsTest {
+    @Test
+    void line_A_for_A() {
+        PrintDiamond d = new PrintDiamond();
+        assertEquals("A", d.makeLine('A','A'));
+    }
+    @Test
+    void line_A_for_B() {
+        PrintDiamond d = new PrintDiamond();
+        assertEquals("*A", d.makeLine('A','B'));
+    }
     @Test
     void line_A_for_C() {
         PrintDiamond d = new PrintDiamond();
