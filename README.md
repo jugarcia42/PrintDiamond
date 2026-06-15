@@ -1,28 +1,28 @@
 # Print Diamond (Dots Version)
 
-## Descripción
+## Description
 
-Print Diamond es un kata de programación cuyo objetivo es generar un patrón en forma de diamante utilizando letras del alfabeto.
+Print Diamond is a programming kata whose goal is to generate a diamond-shaped pattern using letters of the alphabet.
 
-En esta versión, el patrón no se construye con espacios, sino con puntos (`.`), tanto en el interior como en el exterior del diamante. Esto refuerza el trabajo con posiciones relativas y simetría sin depender del “vacío” visual tradicional.
+In this version, the pattern is not built using spaces, but using dots (`.`), both inside and outside the diamond. This reinforces working with relative positions and symmetry without relying on traditional whitespace gaps.
 
-## Reglas
+## Rules
 
-- La entrada es una única letra (de `A` a `Z`).
-- El diamante comienza en `A`.
-- El patrón es simétrico verticalmente.
-- Todo el relleno se hace con `.` (puntos).
-- Cada línea tiene la misma longitud total.
+- The input is a single letter (from `A` to `Z`).
+- The diamond starts at `A`.
+- The pattern is vertically symmetrical.
+- All padding is done using dots (`.`).
+- Each line has the same total length.
 
-## Ejemplo
+## Example
 
-### Entrada
+### Input
 
 ```text
 C
 ```
 
-### Salida
+### Output
 
 ```text
 ..A..
@@ -32,84 +32,84 @@ C...C
 ..A..
 ```
 
-## Construcción del patrón
+## Pattern Construction
 
-Para una letra objetivo `N`:
+For a target letter `N`:
 
-### 1. Tamaño del diamante
-El ancho total de cada línea es:
+### 1. Diamond size
+The total width of each line is:
 
 ```
-2 * (posición de N) - 1
+2 * (position of N) - 1
 ```
 
-Por ejemplo:
+For example:
 - A → 1
 - B → 3
 - C → 5
 - D → 7
 
-## 2. Reglas de cada línea
+## 2. Line rules
 
-Para cada letra `L`:
+For each letter `L`:
 
-- La posición determina cuántos puntos hay a izquierda y derecha.
-- Entre letras se colocan puntos también.
+- Its position determines how many dots are placed on the left and right.
+- Dots are also placed between letters.
 
-### Casos:
+### Cases:
 
-#### Letra A
-Solo una letra centrada:
+#### Letter A
+Only a centered letter:
 
 ```text
 ..A..
 ```
 
-#### Letras intermedias (B, C, ...)
+#### Intermediate letters (B, C, ...)
 
 ```text
 .L...L.
 ```
 
-- Los puntos exteriores centran la letra.
-- Los puntos interiores crecen conforme aumenta la distancia desde A.
+- Outer dots center the letter.
+- Inner dots increase as the distance from A grows.
 
-## 3. Simetría
+## 3. Symmetry
 
-El diamante se construye:
+The diamond is built as:
 
-1. De `A` hasta la letra objetivo.
-2. Luego en orden inverso (sin repetir la línea central).
+1. From `A` to the target letter.
+2. Then in reverse order (without repeating the middle line).
 
-## Conceptos trabajados
+## Concepts Covered
 
-- Programación en Java
-- Manipulación de strings
-- Cálculo de posiciones
-- Simetría algorítmica
-- Generación de patrones
-- Representación visual en texto
-- Control preciso de índices
+- Java programming
+- String manipulation
+- Position calculations
+- Algorithmic symmetry
+- Pattern generation
+- Text-based visual representation
+- Precise index control
 
-## Estrategia de solución
+## Strategy
 
-Un enfoque típico incluye:
+A typical approach includes:
 
-1. Calcular el tamaño total del diamante.
-2. Para cada letra:
-   - Calcular posición relativa.
-   - Construir línea con puntos (`.`) en lugar de espacios.
-3. Concatenar mitad superior e inferior.
+1. Calculating the total diamond size.
+2. For each letter:
+   - Compute its relative position.
+   - Build the line using dots (`.`) instead of spaces.
+3. Concatenate the upper and lower halves.
 
-## Objetivo
+## Objective
 
-El objetivo del kata es practicar:
+The goal of this kata is to practice:
 
-- Construcción de patrones simétricos
-- Manejo preciso de índices
-- Representación visual sin espacios “neutros”
-- Pensamiento estructurado en matrices 1D
+- Construction of symmetric patterns
+- Precise index handling
+- Visual representation without neutral spaces
+- Structured thinking in 1D arrays
 
-## Autor
+## Author
 
-Ejercicio realizado como parte de las prácticas de Cyber Dojo utilizando Java.
+Exercise completed as part of Cyber Dojo practice sessions using Java.
